@@ -11,10 +11,10 @@
 
 #define READ_BUFFER 1024
 Connection::Connection(EventLoop *_loop, Socket *_sock) : loop(_loop), sock(_sock), channel(nullptr){
-    channel = new Channel(loop, sock->getFd());
+    channel = new Channel(loop, sock->getFd()); // 该连接的channel
     std::function<void()> cb = [this, capture0 = sock->getFd()] { echo(capture0); };
-    channel->setCallback(cb);
-    channel->enableReading();
+    channel->setCallback(cb); // 绑定回调函数
+    channel->enableReading(); // 打开事件监听
 }
 
 Connection::~Connection(){

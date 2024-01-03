@@ -25,7 +25,7 @@ Server::~Server() {
 void Server::newConnection(Socket *serv_sock) {
     Connection *conn = new Connection(loop, serv_sock);
     std::function<void(Socket *)> cb = [this](auto &&PH1) { deleteConnection(std::forward<decltype(PH1)>(PH1)); };
-    conn->setDeleteConnectionCallback(cb);
+    conn->setDeleteConnectionCallback(cb);// 绑定删除连接的回调函数
     connections[serv_sock->getFd()] = conn;
 }
 
