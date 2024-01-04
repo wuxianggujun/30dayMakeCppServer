@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.18)
 
-project(day14 VERSION 0.1 DESCRIPTION "Day14" LANGUAGES C CXX)
+project(day15 VERSION 0.1 DESCRIPTION "Day15" LANGUAGES C CXX)
 
 #set(CLIENT_SOURCE test/client.cpp)
 #set(SERVER_SOURCE test/server.cpp)
