@@ -1,8 +1,6 @@
 cmake_minimum_required(VERSION 3.18)
 project(30dayMakeCppServer)
 
-set(CMAKE_CXX_STANDARD 17)
-
 #add_subdirectory(day01)
 #add_subdirectory(day02)
 #add_subdirectory(day03)
@@ -14,4 +12,5 @@ set(CMAKE_CXX_STANDARD 17)
 #add_subdirectory(day09)
 #add_subdirectory(day10)
 #add_subdirectory(day11)
-add_subdirectory(day12)
+#add_subdirectory(day12)
+add_subdirectory(day13)
